@@ -1,81 +1,66 @@
-# Cat vs Dog Image Classification using CNN
+# Cat vs Dog Image Classification using Convolutional Neural Networks (CNN)
 
-## AI/ML Internship – Assignment 9
+## Objective
+The objective of this project is to build a Convolutional Neural Network (CNN) model to classify images as either cats or dogs. The model learns patterns from image data and predicts the correct class.
 
-**Name:** Riya Shukla  
-**Registration Number:** 23BCE11293  
-**Application Number:** IN26012655  
-**Batch Number:** 2(B)
+Dataset
+Dataset Name: CIFAR-10 Dataset (Filtered)
 
----
+Source: Kaggle
 
-## 📌 Objective
+Dataset Link:
+https://www.kaggle.com/datasets/cifar-10/cifar10-python
 
-The objective of this project is to develop a Convolutional Neural Network (CNN) model to classify images into two categories: cats and dogs. The model learns important visual features such as edges, textures, and patterns for accurate classification.
+Note: Only cat and dog classes were used. Dataset is not included in this repository.
 
----
+Libraries Used
+NumPy
+Matplotlib
+Seaborn
+TensorFlow / Keras
+Scikit-learn
 
-## 📊 Dataset
+Modules Used
+Conv2D
+MaxPooling2D
+Flatten
+Dense
+confusion_matrix
+classification_report
 
-Dataset used: CIFAR-10 (Filtered)
+Methodology
+Loaded the CIFAR-10 dataset
+Filtered cat and dog classes
+Normalized pixel values (0–1)
+Built CNN model with Conv2D, MaxPooling and Dense layers
+Trained model for 5 epochs
+Evaluated model using accuracy, confusion matrix and classification report
 
-🔗 https://www.kaggle.com/datasets/cifar-10/cifar10-python
+Model Architecture
+Input Layer: 32x32x3
+Conv Layer 1: 32 filters (ReLU)
+MaxPooling Layer
+Conv Layer 2: 64 filters (ReLU)
+MaxPooling Layer
+Flatten Layer
+Dense Layer: 64 neurons (ReLU)
+Output Layer: 1 neuron (Sigmoid)
 
-Note: The CIFAR-10 dataset contains 10 classes. For this project, only **cat and dog classes were filtered** to meet the assignment requirement.
+Results
+Achieved approximately 74% accuracy
+Accuracy improved over epochs
+Loss decreased during training
 
----
+Conclusion
+The CNN model successfully classifies cat and dog images. CNN helps in extracting features from images. Performance can be improved using larger datasets and deeper models.
 
-## 🛠️ Libraries Used
+Repository Structure
+Assignment-9/
+Assignment-9.ipynb
+README.md
 
-- TensorFlow / Keras  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Scikit-learn  
-
----
-
-## ⚙️ Methodology
-
-1. Loaded CIFAR-10 dataset using TensorFlow  
-2. Filtered cat (3) and dog (5) classes  
-3. Converted labels into binary format (Cat = 0, Dog = 1)  
-4. Normalized pixel values (0–1)  
-5. Built CNN model using:
-   - Convolutional Layers  
-   - MaxPooling Layers  
-   - Dense Layers  
-6. Trained the model for 5 epochs  
-7. Evaluated model performance  
-
----
-
-## 📈 Results
-
-- Achieved ~74% accuracy on test data  
-- Model performance improved over epochs  
-- Validation accuracy followed training accuracy  
-- Loss decreased gradually  
-
----
-
-## 🔍 Model Evaluation
-
-- Accuracy Score  
-- Confusion Matrix  
-- Classification Report  
-- Accuracy & Loss Graphs  
-
----
-
-## Conclusion
-
-The CNN model successfully classifies cat and dog images with good accuracy. It effectively learns image features through convolution layers. The performance can be further improved by using larger datasets, applying data augmentation, and building deeper neural network architectures.
-
----
-
-## ⚠️ Note
-
-Due to dataset download restrictions and runtime limitations, the CIFAR-10 dataset was used and filtered to include only cat and dog classes.
-
----
+Author
+Name: Riya Shukla
+Registration Number: 23BCE11293
+Application Number: IN26012655
+Batch Number: 2(B)
